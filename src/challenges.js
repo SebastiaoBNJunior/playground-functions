@@ -1,10 +1,19 @@
 // Desafio 1 - Crie a função compareTrue
 
-function compareTrue(a, b){
+function compareTrue(a, b) {
   return a && b;
 }
 console.log(compareTrue(true, true));
+
 // Desafio 2 - Crie a função splitSentence
+
+function splitSentence(str) {
+  return str.split(' ');
+}
+console.log(splitSentence('go Trybe')); // ['go', 'Trybe']
+console.log(splitSentence('vamo que vamo')); // ['vamo', 'que', 'vamo']
+console.log(splitSentence('foguete')); // ['foguete']
+
 
 // Desafio 3 - Crie a função concatName
 
