@@ -7,8 +7,8 @@ console.log(compareTrue(true, true));
 
 // Desafio 2 - Crie a função splitSentence
 
-function splitSentence(str) {
-  return str.split(' ');
+function splitSentence(string) {
+  return string.split(' ');
 }
 console.log(splitSentence('go Trybe')); // ['go', 'Trybe']
 console.log(splitSentence('vamo que vamo')); // ['vamo', 'que', 'vamo']
@@ -17,7 +17,16 @@ console.log(splitSentence('foguete')); // ['foguete']
 
 // Desafio 3 - Crie a função concatName
 
+function concatName(list){
+  return list[0]+', '+list[list.length -1];
+}
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
+
 // Desafio 4 - Crie a função footballPoints
+
+
 
 // Desafio 5 - Crie a função highestCount
 
