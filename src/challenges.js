@@ -18,7 +18,7 @@ console.log(splitSentence('foguete')); // ['foguete']
 // Desafio 3 - Crie a função concatName
 
 function concatName(list){
-  return list[0]+', '+list[list.length -1];
+  return list[list.length -1]+', '+list[0]; 
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
@@ -26,7 +26,12 @@ console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 4 - Crie a função footballPoints
 
-
+function footballPoints(wins, ties){
+  return ((wins*3)+ties);
+}
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 5 - Crie a função highestCount
 
