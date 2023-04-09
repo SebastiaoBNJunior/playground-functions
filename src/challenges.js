@@ -82,20 +82,27 @@ console.log(calcAllAreas(10, 50, 'quadrado')); // "Não foi possível fazer o c�
 
 // Desafio 7 - Crie a função catAndMouse
 
-function catAndMouse(mouse, cat1, cat2){
-    if (cat1 > cat2){
-      return ('cat 2');
-    } else if (cat2 > cat1){
-      return ('cat 1');
-    } else {
-      return ('Os gatos trombam e o rato foge');
-    }
+function catAndMouse(mouse, cat1, cat2) {
+  const distance1 = Math.abs(mouse - cat1);
+  const distance2 = Math.abs(mouse - cat2);
+  
+  if (distance1 < distance2) {
+    return 'cat1';
+  } else if (distance2 < distance1) {
+    return 'cat2';
+  } else {
+    return 'os gatos trombam e o rato foge';
+  }
 }
 console.log(catAndMouse(1,3,2));
 console.log(catAndMouse(1,6,12));
 console.log(catAndMouse(1,2,2));
 
 // Desafio 8 - Crie a função fizzBuzz
+
+function fizzBuzz(){
+
+}
 
 // Desafio 9 - Crie a função encode e a função decode
 
