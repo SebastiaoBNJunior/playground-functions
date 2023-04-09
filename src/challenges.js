@@ -14,7 +14,6 @@ console.log(splitSentence('go Trybe')); // ['go', 'Trybe']
 console.log(splitSentence('vamo que vamo')); // ['vamo', 'que', 'vamo']
 console.log(splitSentence('foguete')); // ['foguete']
 
-
 // Desafio 3 - Crie a função concatName
 
 function concatName(list){
@@ -57,7 +56,6 @@ console.log(highestCount(['0', '0', '0']));
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
-
   function calcTriangleArea (base, height){ // Função que calcula a área do triangulo
     return (base * height) / 2;
   }
@@ -66,13 +64,13 @@ console.log(highestCount(['0', '0', '0']));
   }
   function calcAllAreas (base, height, form){ // Função que calcula a área e identifica a forma geométrica
     if (form === 'triangulo'){
-      const area = calcTriangleArea(base, height);
-      return 'O valor da área do triangulo é de: ' +area;
+        const area = calcTriangleArea(base, height);
+        return 'O valor da área do triangulo é de: ' +area;
     } else if (form === 'retangulo'){
-      const area = calcRectangleArea(base, height);
-      return 'O valor da área do retangulo é de: ' +area;
+        const area = calcRectangleArea(base, height);
+        return 'O valor da área do retangulo é de: ' +area;
     } else {
-      return 'Não foi possível fazer o calculo, insira uma forma geométrica válida.'; 
+        return 'Não foi possível fazer o calculo, insira uma forma geométrica válida.'; 
     }
   } 
 
@@ -83,6 +81,19 @@ console.log(calcAllAreas(10, 50, 'retangulo')); // "O valor da área do retângu
 console.log(calcAllAreas(10, 50, 'quadrado')); // "Não foi possível fazer o cálculo, insira uma forma geométrica válida."
 
 // Desafio 7 - Crie a função catAndMouse
+
+function catAndMouse(mouse, cat1, cat2){
+    if (cat1 > cat2){
+      return ('cat 2');
+    } else if (cat2 > cat1){
+      return ('cat 1');
+    } else {
+      return ('Os gatos trombam e o rato foge');
+    }
+}
+console.log(catAndMouse(1,3,2));
+console.log(catAndMouse(1,6,12));
+console.log(catAndMouse(1,2,2));
 
 // Desafio 8 - Crie a função fizzBuzz
 
