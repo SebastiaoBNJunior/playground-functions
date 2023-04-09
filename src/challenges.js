@@ -58,6 +58,29 @@ console.log(highestCount(['0', '0', '0']));
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
 
+  function calcTriangleArea (base, height){ // Função que calcula a área do triangulo
+    return (base * height) / 2;
+  }
+  function calcRectangleArea (base, height){ // Função que calcula a área do retangulo
+    return (base * height);
+  }
+  function calcAllAreas (base, height, form){ // Função que calcula a área e identifica a forma geométrica
+    if (form === 'triangulo'){
+      const area = calcTriangleArea(base, height);
+      return 'O valor da área do triangulo é de: ' +area;
+    } else if (form === 'retangulo'){
+      const area = calcRectangleArea(base, height);
+      return 'O valor da área do retangulo é de: ' +area;
+    } else {
+      return 'Não foi possível fazer o calculo, insira uma forma geométrica válida.'; 
+    }
+  } 
+
+console.log(calcTriangleArea(10, 50)); // 250
+console.log(calcRectangleArea(10, 50)); // 500
+console.log(calcAllAreas(10, 50, 'triangulo')); // "O valor da área do triângulo é de: 250"
+console.log(calcAllAreas(10, 50, 'retangulo')); // "O valor da área do retângulo é de: 500"
+console.log(calcAllAreas(10, 50, 'quadrado')); // "Não foi possível fazer o cálculo, insira uma forma geométrica válida."
 
 // Desafio 7 - Crie a função catAndMouse
 
