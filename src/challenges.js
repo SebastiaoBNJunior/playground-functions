@@ -100,9 +100,27 @@ console.log(catAndMouse(1,2,2));
 
 // Desafio 8 - Crie a função fizzBuzz
 
-function fizzBuzz(){
 
-}
+function fizzBuzz(fizzNumbers){
+  const result = [];
+  for (let i=0; i<fizzNumbers.length; i++){
+    if (fizzNumbers[i] % 3 === 0 && fizzNumbers[i] % 5 === 0){
+      result.push("fizzBuzz");
+    } else if (fizzNumbers[i] % 5 === 0){
+      result.push("buzz");
+    } else if (fizzNumbers[i] % 3 === 0){
+      result.push("fizz");
+    } else {
+      result.push("bug!");
+    }
+  }
+  return result;
+}      
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+console.log(fizzBuzz([7,9]));
+console.log(fizzBuzz([9,25]));
+
+
 
 // Desafio 9 - Crie a função encode e a função decode
 
