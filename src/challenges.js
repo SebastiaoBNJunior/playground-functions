@@ -16,8 +16,8 @@ console.log(splitSentence('foguete')); // ['foguete']
 
 // Desafio 3 - Crie a função concatName
 
-function concatName(list){
-  return list[list.length -1]+', '+list[0]; 
+function concatName(list) {
+  return list[list.length - 1] + ', ' + list[0];
 }
 console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
 console.log(concatName(['foguete', 'não', 'tem', 'ré']));
@@ -25,8 +25,8 @@ console.log(concatName(['captain', 'my', 'captain']));
 
 // Desafio 4 - Crie a função footballPoints
 
-function footballPoints(wins, ties){
-  return ((wins*3)+ties);
+function footballPoints(wins, ties) {
+  return ((wins * 3) + ties);
 }
 console.log(footballPoints(14, 8));
 console.log(footballPoints(1, 2));
@@ -38,13 +38,13 @@ function highestCount(repetitions) {
   if (repetitions.length === 0) {
     return 0;
   }
-  let max_num = repetitions[0];
+  let maxNum = repetitions[0];
   let count = 1;
   for (let i = 1; i < repetitions.length; i++) {
-    if (repetitions[i] > max_num) {
-      max_num = repetitions[i];
+    if (repetitions[i] > maxNum) {
+      maxNum = repetitions[i];
       count = 1;
-    } else if (repetitions[i] === max_num) {
+    } else if (repetitions[i] === maxNum) {
       count++;
     }
   }
@@ -64,7 +64,6 @@ function calcTriangleArea(base, height) {
   area = (base * height) / 2;
   return area;
 }
-
 function calcRectangleArea(base, height) {
   if (base <= 0 || height <= 0) {
     return 'base e altura devem ser números positivos';
@@ -73,7 +72,6 @@ function calcRectangleArea(base, height) {
   area = base * height;
   return area;
 }
-
 function calcAllAreas(base, height, form) {
   if (form === 'triângulo') {
     const triangleArea = calcTriangleArea(base, height);
@@ -91,7 +89,6 @@ function calcAllAreas(base, height, form) {
 function catAndMouse(mouse, cat1, cat2) {
   const distance1 = Math.abs(mouse - cat1);
   const distance2 = Math.abs(mouse - cat2);
-  
   if (distance1 < distance2) {
     return 'cat1';
   } else if (distance2 < distance1) {
@@ -100,32 +97,30 @@ function catAndMouse(mouse, cat1, cat2) {
     return 'os gatos trombam e o rato foge';
   }
 }
-console.log(catAndMouse(1,3,2));
-console.log(catAndMouse(1,6,12));
-console.log(catAndMouse(1,2,2));
+console.log(catAndMouse(1, 3, 2));
+console.log(catAndMouse(1, 6, 12));
+console.log(catAndMouse(1, 2, 2));
 
 // Desafio 8 - Crie a função fizzBuzz
 
-
-function fizzBuzz(fizzNumbers){
+function fizzBuzz(fizzNumbers) {
   const result = [];
-  for (let i=0; i<fizzNumbers.length; i++){
-    if (fizzNumbers[i] % 3 === 0 && fizzNumbers[i] % 5 === 0){
-      result.push("fizzBuzz");
-    } else if (fizzNumbers[i] % 5 === 0){
-      result.push("buzz");
-    } else if (fizzNumbers[i] % 3 === 0){
-      result.push("fizz");
+  for (let i = 0; i < fizzNumbers.length; i++) {
+    if (fizzNumbers[i] % 3 === 0 && fizzNumbers[i] % 5 === 0) {
+      result.push('fizzBuzz');
+    } else if (fizzNumbers[i] % 5 === 0) {
+      result.push('buzz');
+    } else if (fizzNumbers[i] % 3 === 0) {
+      result.push('fizz');
     } else {
-      result.push("bug!");
+      result.push('bug!');
     }
   }
   return result;
-}      
+}
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
-console.log(fizzBuzz([7,9]));
-console.log(fizzBuzz([9,25]));
-
+console.log(fizzBuzz([7, 9]));
+console.log(fizzBuzz([9, 25]));
 
 // Desafio 9 - Crie a função encode e a função decode
 
@@ -145,7 +140,6 @@ console.log(decode('h2ll4')); // hello
 console.log(decode('H4w 1r2 y45 t4d1y?')); // How are you today?
 console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.')); // This is an encoding test.
 console.log(decode('g4 Tryb2!')); // go Trybe!
-
 
 // Desafio 10 - Crie a função techList
 
@@ -171,7 +165,6 @@ console.log(result1); // Deve imprimir o array de objetos esperado
 const result2 = techList([], 'Lucas');
 const expected2 = [];
 console.log(result2); // Deve imprimir um array vazio
-
 
 // Não modifique essas linhas
 module.exports = {
