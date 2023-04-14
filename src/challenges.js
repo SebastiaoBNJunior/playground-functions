@@ -121,8 +121,29 @@ console.log(fizzBuzz([7,9]));
 console.log(fizzBuzz([9,25]));
 
 
-
 // Desafio 9 - Crie a função encode e a função decode
+
+function encodeDecode(str) {
+  function encode(s) {
+    const vowels = { 'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5' };
+    return s.split('').map(c => vowels[c] || c).join('');
+  }
+  
+  function decode(s) {
+    const numbers = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' };
+    return s.split('').map(c => numbers[c] || c).join('');
+  }
+  
+  const encoded = encode(str);
+  const decoded = decode(encoded);
+  
+  return { encoded, decoded };
+}
+console.log(encodeDecode('hello')); // { encoded: 'h2ll4', decoded: 'hello' }
+console.log(encodeDecode('How are you today?')); // { encoded: 'H4w 1r2 y45 t4d1y?', decoded: 'How are you today?' }
+console.log(encodeDecode('This is an encoding test.')); // { encoded: 'Th3s 3s 1n 2nc4d3ng t2st.', decoded: 'This is an encoding test.' }
+console.log(encodeDecode('go Trybe!')); // { encoded: 'g4 Tryb2!', decoded: 'go Trybe!' }
+
 
 // Desafio 10 - Crie a função techList
 
