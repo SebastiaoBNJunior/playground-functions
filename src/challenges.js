@@ -123,26 +123,22 @@ console.log(fizzBuzz([9,25]));
 
 // Desafio 9 - Crie a função encode e a função decode
 
-function encodeDecode(str) {
-  function encode(s) {
-    const vowels = { 'a': '1', 'e': '2', 'i': '3', 'o': '4', 'u': '5' };
-    return s.split('').map(c => vowels[c] || c).join('');
-  }
-  
-  function decode(s) {
-    const numbers = { '1': 'a', '2': 'e', '3': 'i', '4': 'o', '5': 'u' };
-    return s.split('').map(c => numbers[c] || c).join('');
-  }
-  
-  const encoded = encode(str);
-  const decoded = decode(encoded);
-  
-  return { encoded, decoded };
+function encode(str) {
+  return str.replace(/[aeiou]/g, match => ({ a: 1, e: 2, i: 3, o: 4, u: 5 }[match]));
 }
-console.log(encodeDecode('hello')); // { encoded: 'h2ll4', decoded: 'hello' }
-console.log(encodeDecode('How are you today?')); // { encoded: 'H4w 1r2 y45 t4d1y?', decoded: 'How are you today?' }
-console.log(encodeDecode('This is an encoding test.')); // { encoded: 'Th3s 3s 1n 2nc4d3ng t2st.', decoded: 'This is an encoding test.' }
-console.log(encodeDecode('go Trybe!')); // { encoded: 'g4 Tryb2!', decoded: 'go Trybe!' }
+
+function decode(str) {
+  return str.replace(/[1-5]/g, match => ({ 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' }[match]));
+}
+console.log(encode('hello')); // h2ll4
+console.log(encode('How are you today?')); // H4w 1r2 y45 t4d1y?
+console.log(encode('This is an encoding test.')); // Th3s 3s 1n 2nc4d3ng t2st.
+console.log(encode('go Trybe!')); // g4 Tryb2!
+
+console.log(decode('h2ll4')); // hello
+console.log(decode('H4w 1r2 y45 t4d1y?')); // How are you today?
+console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.')); // This is an encoding test.
+console.log(decode('g4 Tryb2!')); // go Trybe!
 
 
 // Desafio 10 - Crie a função techList
