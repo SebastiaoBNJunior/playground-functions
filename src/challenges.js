@@ -147,6 +147,30 @@ console.log(encodeDecode('go Trybe!')); // { encoded: 'g4 Tryb2!', decoded: 'go 
 
 // Desafio 10 - Crie a função techList
 
+function techList(techs, name) {
+  if (!techs || techs.length === 0) return [];
+
+  return techs
+    .sort()
+    .map((tech) => ({ tech, name }));
+}
+// Teste 1 - Deve retornar uma lista de objetos ordenados quando é passada uma lista com 5 tecnologias
+const result1 = techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas');
+const expected1 = [
+  { tech: 'CSS', name: 'Lucas' },
+  { tech: 'HTML', name: 'Lucas' },
+  { tech: 'JavaScript', name: 'Lucas' },
+  { tech: 'Jest', name: 'Lucas' },
+  { tech: 'React', name: 'Lucas' },
+];
+console.log(result1); // Deve imprimir o array de objetos esperado
+
+// Teste 2 - Deve retornar um array vazio quando a lista de tecnologias estiver vazia
+const result2 = techList([], 'Lucas');
+const expected2 = [];
+console.log(result2); // Deve imprimir um array vazio
+
+
 // Não modifique essas linhas
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
