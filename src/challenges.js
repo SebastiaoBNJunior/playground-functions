@@ -57,34 +57,34 @@ console.log(highestCount(['0', '0', '0']));
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
 function calcTriangleArea(base, height) {
-  return (base * height) / 2;
+  if (base <= 0 || height <= 0) {
+    return 'base e altura devem ser números positivos';
+  }
+  let area;
+  area = (base * height) / 2;
+  return area;
 }
 
 function calcRectangleArea(base, height) {
-  return base * height;
+  if (base <= 0 || height <= 0) {
+    return 'base e altura devem ser números positivos';
+  }
+  let area;
+  area = base * height;
+  return area;
 }
 
 function calcAllAreas(base, height, form) {
   if (form === 'triângulo') {
-    const area = calcTriangleArea(base, height);
-    return `O valor da área do triângulo é de: ${area}`;
-  } else if (form === 'retângulo') {
-    const area = calcRectangleArea(base, height);
-    return `O valor da área do retângulo é de: ${area}`;
-  } else {
-    return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida.';
+    const triangleArea = calcTriangleArea(base, height);
+    return `O valor da área do triângulo é de: ${triangleArea}`;
   }
+  if (form === 'retângulo') {
+    const rectangleArea = calcRectangleArea(base, height);
+    return `O valor da área do retângulo é de: ${rectangleArea}`;
+  }
+  return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
 }
-const base = 10;
-const height = 50;
-
-console.log(calcTriangleArea(base, height)); // resultado: 250
-console.log(calcRectangleArea(base, height)); // resultado: 500
-
-console.log(calcAllAreas(base, height, 'triângulo')); // resultado: O valor da área do triângulo é de: 250
-console.log(calcAllAreas(base, height, 'retângulo')); // resultado: O valor da área do retângulo é de: 500
-console.log(calcAllAreas(base, height, 'quadrado')); // resultado: Não foi possível fazer o cálculo, insira uma forma geométrica válida.
-
 
 // Desafio 7 - Crie a função catAndMouse
 
